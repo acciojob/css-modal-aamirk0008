@@ -1,1 +1,114 @@
 /*  your css code here. If applicable */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #f0f0f0 0%, #ffffff 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Open modal button */
+  #openModal {
+    padding: 8px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1.5px solid #007bff;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #007bff;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+  #openModal:hover,
+  #openModal:focus {
+    background-color: #007bff;
+    color: #ffffff;
+    outline: none;
+  }
+
+  /* Modal overlay */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1200;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    /* center content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInBg 0.3s ease forwards;
+  }
+  .modal.show {
+    display: flex;
+  }
+  @keyframes fadeInBg {
+    from { background: rgba(0, 0, 0, 0); }
+    to { background: rgba(0, 0, 0, 0.5); }
+  }
+
+  /* Modal content container */
+  .modal-content {
+    background: white;
+    width: 400px;
+    max-width: calc(100vw - 40px);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 0.13);
+    animation: scaleIn 0.3s ease forwards;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Modal header style */
+  .modal-header {
+    padding: 16px 24px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-header h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  /* Close button style */
+  .close-modal {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .close-modal:hover,
+  .close-modal:focus {
+    color: #cce5ff;
+    outline: none;
+  }
+
+  /* Modal body styling */
+  .modal-body {
+    padding: 20px 24px;
+    color: #333333;
+    font-weight: 500;
+    line-height: 1.5;
+  }
