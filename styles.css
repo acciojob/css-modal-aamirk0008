@@ -40,9 +40,10 @@
         }
 
         .modal.show {
-            display: flex;
+            display: block;
             justify-content: center;
             align-items: center;
+			margin: auto;
         }
 
         .modal-content {
